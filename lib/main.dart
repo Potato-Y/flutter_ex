@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ex/screen/ex/navigation/navigation_ex_screen.dart';
 import 'package:flutter_ex/screen/main_screen.dart';
 
 void main() {
@@ -10,9 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "flutter ex",
-      home: Home(),
+      initialRoute: '/index',
+      routes: {
+        '/index': (context) => const Home(),
+        '/route_navigation_ex': (context) => const NavigationExScreen(),
+      },
     );
   }
 }
